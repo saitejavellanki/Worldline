@@ -29,11 +29,7 @@ pipeline {
             steps {
                 script {
                     bat """
-                    sonar-scanner ^
-                    -Dsonar.projectKey=backend_project ^
-                    -Dsonar.sources=src ^
-                    -Dsonar.host.url=${SONARQUBE_URL} ^
-                    -Dsonar.login=${SONARQUBE_TOKEN}
+                    sonar-scanner -Dsonar.projectKey=backend_project -Dsonar.sources=src -Dsonar.host.url=http://localhost:9099 -Dsonar.login=sqp_62ac22e3820cec471baeda6663beda1989078d30
                     """
                 }
             }
