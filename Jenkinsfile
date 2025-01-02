@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'NodeJS'
+        nodejs 'nodejs'
     }
     environment {
         SONARQUBE_URL = 'http://localhost:9099'
